@@ -12,7 +12,7 @@ exports.getFoods = (req, reply) => {
             db.close();
         });
     });
-        return "aasdasda"
+        return "text"
     } catch (err) {
         console.log(err);
     }
