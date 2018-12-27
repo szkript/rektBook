@@ -1,4 +1,6 @@
 // Import the library
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
 const server = require('server');
 
 function getRandomInt(max) {
@@ -34,9 +36,27 @@ hambi.forEach(function (ham) {
     console.log(ham.price);
     let asd = [ ham.name,ham.price ]
   });
+
+
+for (var ham of hambi) {
+    console.log(ham.name);
+  }
+
+for (var [key, value] of msg) {
+    console.log(key + ", " + value);
+}
 */
 
 // Launch the server to always answer "Hello world"
-server(ctx => hambi);
+// server(ctx => hambi);
 
 
+MongoClient.connect(url, function(err, db) {
+  if (err) throw err;
+  var dbo = db.db("amiburger");
+  dbo.createCollection("foods", function(err, res) {
+    if (err) throw err;
+    console.log("Collection created!");
+    db.close();
+  });
+});
