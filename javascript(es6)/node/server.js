@@ -2,7 +2,7 @@
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 const server = require('server');
-
+const foods = require("./foods")
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
   }
@@ -50,7 +50,7 @@ for (var [key, value] of msg) {
 // Launch the server to always answer "Hello world"
 // server(ctx => hambi);
 
-
+console.log(foods.foods.hambi)
 MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("amiburger");

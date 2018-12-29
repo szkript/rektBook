@@ -118,5 +118,5 @@ const drink = [
 
 const foods = {hambi: hambi, hotdog: hotdog, wrap: wrap, salad: salad, kentucky: kentucky, pizza: pizza, koret: koret, sauce: sauce, drink: drink};
 
-export default foods;
+exports.foods = foods;
 
