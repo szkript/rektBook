@@ -13,14 +13,8 @@ const msg = [
     {hvmi : "mondjuk a kurva anyád"}
 ]
 
-const hambi = [
-    {"id": 1, "name": "Ami burger", "price": 1080, "menuPrice": 1560,
-        "description": "házi buci, 15dkg marhahúspogácsa, saláta, karamellizált hagyma, cheddar sajt, bacom,paradicsom, uborka, kétféle házi szósz"},
-    {"id": 2, "name": "Szaftos lüszi", "price": 1280, "menuPrice": 1760,
-        "description": "házi buci, 15dkg cheddarral töltött marhahúspogácsa, saláta, karamellizált hagyma, bacon, paradicsom, jalapeno,sárga szósz"},
-    {"id": 3, "name": "big kahuna", "price": 1180, "menuPrice": 1660,
-        "description": "házi buci, 15dkg marhahúspogácsa, coles law, cheddar sajt, bacon, paradicsom, ketchup, mustár"}
-    ];
+/*
+
   
 /* const vmi = msg[getRandomInt(2)] 
 console.log(hambi[getRandomInt(2)])
@@ -45,18 +39,52 @@ for (var ham of hambi) {
 for (var [key, value] of msg) {
     console.log(key + ", " + value);
 }
+
+
+
+for (let nev of nevek) {
+    console.log(nev.name)
+    MongoClient.connect(url, function(err, db) {
+    var dbo = db.db("amiburger");
+    dbo.createCollection(nev.name, function(err, res) {
+        console.log(res);
+        db.close()})
+    }  
+    )};
+ 
+
+
+
 */
+
+
 
 // Launch the server to always answer "Hello world"
 // server(ctx => hambi);
 
-console.log(foods.foods.hambi)
-MongoClient.connect(url, function(err, db) {
-  if (err) throw err;
-  var dbo = db.db("amiburger");
-  dbo.createCollection("foods", function(err, res) {
-    if (err) throw err;
-    console.log("Collection created!");
-    db.close();
-  });
-});
+// console.log(foods.foods.hambi)
+/*
+const nevek = [
+    {name : "hambi"},
+    {name : "hotdog"},
+    {name : "wrap"},
+    {name : "salad"},
+    {name : "kentucky"},
+    {name : "pizza"},
+    {name : "koret"},
+    {name : "sauce"},
+    {name : "drink"},
+    ];
+    */
+    MongoClient.connect(url, function(err, db) {
+    var dbo = db.db("amiburger");
+    dbo.collection("drink").insertMany(foods.foods.drink, function(err, res) {
+        db.close()})
+    })
+ 
+
+/*
+for (var ham of foods.foods.hambi) {
+    console.log(ham.name);
+  }
+ */ 
