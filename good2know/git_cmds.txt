@@ -1,0 +1,4 @@
+git init                      #initialize
+git add                       #add to stage
+git commit -a -m              #add message and description, write msg between ""
+git rm -rf <directory_name>   #remove directory forced
