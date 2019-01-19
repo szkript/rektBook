@@ -1,7 +1,0 @@
-#commands / windows 10 ( RAW format)
-net stop MongoDB    #stop mongodb service
-db.shutdownServer   #stop database
-mongod              #start server
-use dbname          #switch to database named dbname
-
-RD /S /Q path       #remove dir /S ask, /Q silent mode
