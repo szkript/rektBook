@@ -2,3 +2,8 @@ git init                      #initialize
 git add                       #add to stage
 git commit -a -m              #add message and description, write msg between ""
 git rm -rf <directory_name>   #remove directory forced
+git push origin master        #push into master branch
+git status                    #useful infos
+
+git config user.name "someone"
+git config user.email "someone@someplace.com"
