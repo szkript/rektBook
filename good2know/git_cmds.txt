@@ -2,8 +2,14 @@ git init                      #initialize
 git add                       #add to stage
 git commit -a -m              #add message and description, write msg between ""
 git rm -rf <directory_name>   #remove directory forced
-git push origin master        #push into master branch
+git push -u origin master        #push into master branch
 git status                    #useful infos
+
+#connect with online repository
+git remote add origin git@gitlab.com:szkript/butorokatszerelunk.git
 
 git config user.name "someone"
 git config user.email "someone@someplace.com"
+
+git config --global user.name "Szanyi Krisztián"
+git config --global user.email "szkript@gmail.com"
