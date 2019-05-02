@@ -1,0 +1,8 @@
+###PACKAGES
+conda list -n myenv         #list packages inside the env
+conda list                  #list packages of the activated env(use inside activated)
+###ENVIRONMENTS
+conda info --envs           #list of environments
+conda env list              #same as above
+conda activate env          #activate created venv (simpler -> activate env)
+conda deactivate            #deactivate current active venv
