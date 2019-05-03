@@ -7,3 +7,4 @@ conda env list                      #same as above
 conda activate env                  #activate created venv (simpler -> activate env)
 conda deactivate                    #deactivate current active venv
 conda remove --name myenv --all     #remove venv
+conda create -n env                 #create new environment
