@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+<body>
+
+<h2>Fivem Server tool</h2>
+
+<button type="button" onclick="start()">Start</button>
+
+<button type="button" onclick="stop()">Stop</button>
+
+<button type="button" onclick="restart()">Restart</button>
+
+<script type="text/javascript">
+   function start() {
+     $.ajax({
+       url: '/var/www/serverstart.php',
+       type: 'GET',
+       dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+       data: {param1: 'value1'}
+     })
+     .done(function() {
+       console.log("success");
+     })
+     .fail(function() {
+       console.log("error");
+     })
+     .always(function() {
+       console.log("complete");
+     });
+    }
+
+   function stop() {
+    $.ajax({
+       url: '/var/www/serverstop.php',
+       type: 'GET',
+       dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+       data: {param1: 'value1'}
+     })
+     .done(function() {
+       console.log("success");
+     })
+     .fail(function() {
+       console.log("error");
+     })
+     .always(function() {
+       console.log("complete");
+     });
+    }
+
+   function restart() {
+     $.ajax({
+       url: '/var/www/serverrestart.php',
+       type: 'GET',
+       dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
+       data: {param1: 'value1'}
+     })
+     .done(function() {
+       console.log("success");
+     })
+     .fail(function() {
+       console.log("error");
+     })
+     .always(function() {
+       console.log("complete");
+     });
+    }
+    </script>
+
+</body>
+</html> 

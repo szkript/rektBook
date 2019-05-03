@@ -24,7 +24,12 @@ $(document).ready(function () {
         
         // hiding slowly the link
         // $( this ).hide( "slow" );
+        let newDiv = document.createElement("div");
+        newDiv.innerHTML = "<a id='nani'>omae wa mo shinderiou</a>";
+        document.body.appendChild(newDiv);
     })
+    let naniBtn = document.getElementById("nani");
+    event.preventDefault();
+    console.log("naniii");
+    });
 
-
-});
