@@ -1,0 +1,18 @@
+SELECT shows.title,
+       year,
+       runtime,
+       trailer,
+       homepage,
+       rating,
+       id,
+       FOO.genre
+ 
+FROM
+       (SELECT title, string_agg(genres.name, ', ') AS genre FROM shows
+              JOIN show_genres ON shows.id = show_genres.show_id
+              JOIN genres ON show_genres.genre_id = genres.id
+       GROUP BY shows.title) AS FOO
+JOIN shows ON FOO.title = shows.title
+ORDER BY shows.rating
+OFFSET 0
+LIMIT 15

@@ -1,0 +1,10 @@
+@app.route('/')
+def index():
+    limit = 15
+    try:
+        page = int(request.args.get('page', 0))
+    except ValueError:
+        page = 0
+ 
+    shows = queries.get_shows(limit, page)
+    return render_template('index.html', shows=shows, page=page)
