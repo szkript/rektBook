@@ -1,0 +1,11 @@
+javac                       #java compiler
+javac -Xlint:all *.java     #compile all file with warning
+java AppName                #run compiled java app
+java -cp .. HelloWorldApp   # .. AS path /add path
+
+######  EXAMPLE  ###############################
+######  how to find associated files #########
+##############################################
+[ccer@codecool:/tmp/hello]$ find -name '*.java'
+./com/codecool/hello/util/Helloer.java
+./com/codecool/hello/HelloWorldApp.java
