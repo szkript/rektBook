@@ -8,3 +8,11 @@ conda activate env                  #activate created venv (simpler -> activate 
 conda deactivate                    #deactivate current active venv
 conda remove --name myenv --all     #remove venv
 conda create -n env                 #create new environment
+conda list -e > requirements.txt    #Save all the info about packages to your folder
+
+#To export environment file
+activate <environment-name>
+conda env export > <environment-name>.yml
+
+#For other person to use the environment
+conda env create -f <environment-name>.yml
