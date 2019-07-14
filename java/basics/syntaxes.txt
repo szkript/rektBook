@@ -1,0 +1,3 @@
+##### basic class #####
+public class
+private class

@@ -1,7 +1,7 @@
 javac                       #java compiler
 javac -Xlint:all *.java     #compile all file with warning
 java AppName                #run compiled java app
-java -cp .. HelloWorldApp   # .. AS path /add path
+java -cp .. HelloWorldApp   # .. AS path /add path (cp means classpath)
 
 ######  EXAMPLE  ###############################
 ######  how to find associated files #########
@@ -9,3 +9,9 @@ java -cp .. HelloWorldApp   # .. AS path /add path
 [ccer@codecool:/tmp/hello]$ find -name '*.java'
 ./com/codecool/hello/util/Helloer.java
 ./com/codecool/hello/HelloWorldApp.java
+
+
+#### JAR ####
+(win10)
+jar cvf nameOfMyTheme.jar YourClass.class             
+javac -cp Terminal.jar *.java       # compile java with add jar with classpath
