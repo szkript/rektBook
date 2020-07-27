@@ -1,0 +1,1 @@
+create table word_collection(id INTEGER PRIMARY KEY AUTOINCREMENT, letter varchar(10), word varchar(100), meaning varchar(255));
