@@ -1,0 +1,1 @@
+create table users(id INTEGER PRIMARY KEY AUTOINCREMENT, username varchar(55), email varchar(100));
