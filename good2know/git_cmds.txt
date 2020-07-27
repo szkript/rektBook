@@ -1,9 +1,16 @@
 git init                      #initialize
 git add                       #add to stage
 git commit -a -m              #add message and description, write msg between ""
-git rm -rf <directory_name>   #remove directory forced
 git push -u origin master        #push into master branch
 git status                    #useful infos
+
+#Remove file or dir
+
+git rm -rf <directory_name>   #remove directory forced
+git rm --cached mylogfile.log   #remove file from remote but not from local  
+git rm --cached  mydirectory    #remove folder from remote but not from local
+git rm --cached -r mydirectory  #remove folder with folders recursively from remote but not from local
+
 
 #connect with online repository
 git remote add origin git@gitlab.com:szkript/butorokatszerelunk.git
